@@ -12,3 +12,10 @@ with open(filename) as f:
     for row in reader:
         high = int(row[5])
         highs.append(high)
+
+# Plot the high temperatures.
+plt.style.use('fivethirtyeight')
+fig, ax = plt.subplots()
+ax.plot(highs, c='red')
+
+plt.show()
