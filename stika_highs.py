@@ -18,4 +18,11 @@ plt.style.use('fivethirtyeight')
 fig, ax = plt.subplots()
 ax.plot(highs, c='red')
 
+# Format Plot.
+plt.title("Daily high Temperatures, july 2018", fontsize=24)
+plt.xlabel(" ", fontsize=14)
+plt.ylabel("Temperature (F)", fontsize=14)
+plt.tick_params(axis='both', which='major', labelsize=14)
+
+
 plt.show()
