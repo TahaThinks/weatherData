@@ -20,7 +20,7 @@ with open(filename) as f:
 # Plot the high temperatures.
 plt.style.use('fivethirtyeight')
 fig, ax = plt.subplots()
-ax.plot(highs, c='red')
+ax.plot(dates, highs, c='red') #X-axis is Dates & y-axis is highs
 
 # Format Plot.
 plt.title("Daily high Temperatures, july 2018", fontsize=24)
