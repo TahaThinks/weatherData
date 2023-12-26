@@ -24,9 +24,10 @@ with open(filename) as f:
 plt.style.use('fivethirtyeight')
 fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red') #X-axis is Dates & y-axis is high temperature
+ax.plot(dates, lows, c='blue') #X-axis is Dates & y-axis is low temperature
 
 # Format Plot.
-plt.title("Daily high Temperatures - 2018", fontsize=24)
+plt.title("Daily high and low Temperatures - 2018", fontsize=24)
 plt.xlabel(" ", fontsize=14)
 fig.autofmt_xdate()
 plt.ylabel("Temperature (F)", fontsize=14)
