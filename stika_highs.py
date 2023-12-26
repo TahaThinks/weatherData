@@ -20,7 +20,7 @@ with open(filename) as f:
         current_date = datetime.strptime(row[2], "%Y-%m-%d")
         dates.append(current_date)
 
-# Plot the high temperatures.
+# Plot the high & Low temperatures.
 plt.style.use('fivethirtyeight')
 fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red') #X-axis is Dates & y-axis is high temperature
