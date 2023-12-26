@@ -7,12 +7,15 @@ filename = 'data\sitka_weather_07-2018_simple.csv'
 with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
-    
-    # Get high temperature from this file
-    highs = []
+
+    # Get dates and high temperatures from this file.
+    dates, highs = [], []
     for row in reader:
         high = int(row[5])
         highs.append(high)
+        
+        current_date = datetime.strptime(row[2], "%Y-%m-%d")
+        dates.append(current_date)
 
 # Plot the high temperatures.
 plt.style.use('fivethirtyeight')
