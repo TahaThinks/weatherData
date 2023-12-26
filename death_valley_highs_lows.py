@@ -12,14 +12,17 @@ with open(filename) as f:
 
     highs, lows, dates = [],[],[]
     for row in reader:
-        high = int(row[4])
-        highs.append(high)
+        current_date = datetime.strptime(row[2], "%Y-%m-%d")        
+        try:
+            high = int(row[4])
+            low = int(row[5])
+        except:
+            print(f"Missing data for {current_date}")
+        else:
+            dates.append(current_date)
+            highs.append(high)
+            lows.append(low)
 
-        low = int(row[5])
-        lows.append(lows)
-
-        current_date = datetime.strptime(row[2], "%Y-%m-%d")
-        dates.append(current_date)
 
 # Plot high and low temperatures
 plt.style.use('fivethirtyeight')
