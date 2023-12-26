@@ -25,6 +25,7 @@ plt.style.use('fivethirtyeight')
 fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red') #X-axis is Dates & y-axis is high temperature
 ax.plot(dates, lows, c='blue') #X-axis is Dates & y-axis is low temperature
+plt.fill_between(dates,highs,lows, facecolor='blue', alpha=0.1)
 
 # Format Plot.
 plt.title("Daily high and low Temperatures - 2018", fontsize=24)
