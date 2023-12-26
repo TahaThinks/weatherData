@@ -25,6 +25,7 @@ ax.plot(dates, highs, c='red') #X-axis is Dates & y-axis is highs
 # Format Plot.
 plt.title("Daily high Temperatures, july 2018", fontsize=24)
 plt.xlabel(" ", fontsize=14)
+fig.autofmt_xdate()
 plt.ylabel("Temperature (F)", fontsize=14)
 plt.tick_params(axis='both', which='major', labelsize=14)
 
