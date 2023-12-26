@@ -28,8 +28,15 @@ with open(filename) as f:
 plt.style.use('fivethirtyeight')
 fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red')
-ax.plot(dates, lows, c='red')
+ax.plot(dates, lows, c='blue')
+plt.fill_between(dates,highs,lows, facecolor='blue', alpha=0.1)
 
+# Format Plot.
+plt.title("Daily high and low Temperatures - 2018/Death Valley, CA", fontsize=20)
+plt.xlabel(" ", fontsize=14)
+fig.autofmt_xdate()
+plt.ylabel("Temperature (F)", fontsize=14)
+plt.tick_params(axis='both', which='major', labelsize=14)
 
 
 plt.show()
