@@ -2,7 +2,7 @@ import csv
 from datetime import datetime
 import matplotlib.pyplot as plt
 
-filename = 'data/skita_weather_2018_simple.csv'
+filename = 'data/sitka_weather_2018_simple.csv'
 
 # Extracting Rainfall & Dates:
 
@@ -18,3 +18,10 @@ with open(filename) as f:
         current_date = datetime.strptime(row[2], "%Y-%m-%d")
         dates.append(current_date)
 
+# Plot the Rainfall with respect to the Date
+plt.style.use('seaborn-v0_8-bright')
+fig, ax = plt.subplots()
+ax.plot(dates, rainfall, c="dodgerblue")
+
+
+plt.show()
