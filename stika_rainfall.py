@@ -24,4 +24,11 @@ fig, ax = plt.subplots()
 ax.plot(dates, rainfall, c="dodgerblue")
 
 
+# Format Plot:
+plt.title("Daily Rainfall in Stika - 2018", fontsize=24)
+plt.xlabel(" ", fontsize=14)
+fig.autofmt_xdate()
+plt.ylabel("Temperature (F)", fontsize=14)
+plt.tick_params(axis='both', which='major', labelsize=14)
+
 plt.show()
