@@ -39,7 +39,7 @@ with open(filename2) as f:
 plt.style.use('seaborn-v0_8-bright')
 fig, ax = plt.subplots()
 ax.plot(skita_dates, skita_rainfall, c="dodgerblue")
-ax.plot(dv_dates, dv_rainfall, c="darkviolet")
+ax.plot(dv_dates, dv_rainfall, c="darkviolet") 
 
 
 # Format Plot:
